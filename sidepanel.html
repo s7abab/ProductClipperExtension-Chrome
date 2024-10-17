@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intoAEC Product Clipper</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h2>Clip Product</h2>
+    </div>
+    <form id="productForm">
+        <div class="input-group">
+            <input type="text" id="productName" name="productName" required>
+            <button type="button" class="select-btn" data-target="productName">Select</button>
+            <label for="productName">Product Name:</label>
+        </div>
+
+        <label for="productCategory">Product Category:</label>
+        <select id="productCategory" name="productCategory" required>
+            <option value="">Select a category</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+            <option value="home">Home & Garden</option>
+        </select>
+
+        <label for="productSubCategory">Sub Category:</label>
+        <select id="productSubCategory" name="productSubCategory" required>
+            <option value="">Select a sub-category</option>
+            <option value="phones">Phones</option>
+            <option value="laptops">Laptops</option>
+            <option value="shirts">Shirts</option>
+        </select>
+
+        <label for="assignToProject">Assign to Project:</label>
+        <select id="assignToProject" name="assignToProject" required>
+            <option value="">Select a project</option>
+            <option value="project1">Project 1</option>
+            <option value="project2">Project 2</option>
+            <option value="project3">Project 3</option>
+        </select>
+
+        <div class="input-group">
+            <textarea id="description" name="description" rows="3" required></textarea>
+            <button type="button" class="select-btn" data-target="description">Select</button>
+            <label for="description">Description:</label>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="sku" name="sku" required>
+            <button type="button" class="select-btn" data-target="sku">Select</button>
+            <label for="sku">SKU:</label>
+        </div>
+
+        <label for="measurementUnit">Measurement Unit:</label>
+        <select id="measurementUnit" name="measurementUnit" required>
+            <option value="">Select a unit</option>
+            <option value="piece">Piece</option>
+            <option value="kg">Kilogram</option>
+            <option value="liter">Liter</option>
+        </select>
+
+        <div class="input-group">
+            <input type="number" id="unitCost" name="unitCost" step="0.01" required>
+            <button type="button" class="select-btn" data-target="unitCost">Select</button>
+            <label for="unitCost">Unit Cost:</label>
+        </div>
+    </form>
+    <div id="result"></div>
+    <script src="sidepanel.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Product Details Clipper",
+  "version": "1.0",
+  "description": "Clip product details from web pages",
+  "permissions": ["activeTab", "storage", "scripting", "sidePanel"],
+  "action": {
+    "default_title": "Open Product Clipper"
+  },
+  "icons": {
+    "128": "images/icon.svg"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
